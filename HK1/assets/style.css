@@ -136,9 +136,10 @@ header nav > ul a:hover{
     gap: 12px;
     box-sizing: border-box;
     text-align: center;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     background: #fff;
-    border: 2px solid #000000;    /* normal border */
+    border: 2px solid #000000;
     border-radius: 20px;
     padding: 15px;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
@@ -181,17 +182,33 @@ header nav > ul a:hover{
     width: 90%;
     max-width: 1600px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 items per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 0 auto;
     padding-bottom: 250px;
-
 }
+
 .noidung{
     max-width: 400px;
     margin: 0 auto;
 }
 
+/* ---------- Responsive breakpoints ---------- */
+@media (max-width: 992px){
+    .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .trend{
+        max-width: 100%;
+    }
+}
 
 
 /*BAND INTRODUCTION*/
@@ -323,3 +340,4 @@ footer .footer_icon{
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+
